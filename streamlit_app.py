@@ -10,4 +10,4 @@ items = [
           '🐔 Hard-Boiled Free-Range Egg',
           '🥑🍞 Avocado Toast'
 ]
-map(streamlit.text, items)
+list(map(streamlit.text, items))
