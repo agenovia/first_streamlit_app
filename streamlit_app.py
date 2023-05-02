@@ -1,8 +1,8 @@
-import streamlit
+import streamlit as st
 
-streamlit.title('My Parents New Healthy Diner')
+st.title('My Parents New Healthy Diner')
 
-streamlit.header('Breakfast Favorites')
+st.header('Breakfast Favorites')
 
 items = [
           '🥣 Omega 3 & Blueberry Oatmeal',
@@ -10,4 +10,6 @@ items = [
           '🐔 Hard-Boiled Free-Range Egg',
           '🥑🍞 Avocado Toast'
 ]
-list(map(streamlit.text, items))
+list(map(st.text, items))
+
+st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
