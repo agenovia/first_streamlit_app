@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('My Parents New Healthy Diner')
+st.title("My Mom's New Healthy Diner")
 
 st.header('Breakfast Favorites')
 
