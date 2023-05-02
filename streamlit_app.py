@@ -19,6 +19,7 @@ my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 my_fruit_list.set_index("Fruit", drop=True, inplace=True)
 
 # put  pick list
-st.multiselect("Pick some fruits:", my_fruit_list.index.tolist(), my_fruit_list.index.tolist()[:2])
+fruits_selected = st.multiselect("Pick some fruits:", my_fruit_list.index.tolist(), my_fruit_list.index.tolist()[:2])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
 # display the table on the page
-st.dataframe(my_fruit_list)
+st.dataframe(fruits_to_show)
