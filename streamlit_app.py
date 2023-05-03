@@ -1,8 +1,9 @@
 import streamlit
-import pandas as pd
+import pandas
 import requests
 
 st = streamlit
+pd = pandas
 
 st.title("My Mom's New Healthy Diner")
 
