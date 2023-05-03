@@ -1,6 +1,8 @@
-import streamlit as st
+import streamlit
 import pandas as pd
 import requests
+
+st = streamlit
 
 st.title("My Mom's New Healthy Diner")
 
@@ -29,3 +31,6 @@ st.dataframe(fruits_to_show)
 st.header("FruityVice Fruit Advice!")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(fruityvice_response.json())
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# write your own comment - what does this do?
+streamlit.dataframe(fruityvice_normalized)
